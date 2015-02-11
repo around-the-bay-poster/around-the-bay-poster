@@ -99,7 +99,7 @@ $(function() {
 
   $("#downloadPdf").click(function() {
     var dataURL = $image.cropper("getDataURL", "image/jpeg", 1);
-    var doc = new jsPDF();
+    var doc = new jsPDF('portrait', 'mm', 'a3');
     doc.addImage(dataURL, 'JPEG', 15, 40, 180, 160);
     // Optional - set properties on the document
     doc.setProperties({
