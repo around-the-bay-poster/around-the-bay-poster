@@ -111,8 +111,9 @@ $(function() {
       keywords: 'generated, javascript, web 2.0, ajax',
       creator: 'NAME?'
     });
-    //alert(doc.output('datauristring'));
-    //$(".poster-preview object").attr('data', doc.output('datauristring'));
+    //alert(doc.output('bloburi'));
+    //$(".poster-preview object").attr('data', doc.output('bloburi'));
+    $(".poster-preview iframe").attr('src', doc.output('bloburi'));
     doc.save('AroundTheBayPoster.pdf');
   });
 
