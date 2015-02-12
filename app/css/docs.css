@@ -83,3 +83,7 @@
 .eg-output img {
   max-height: 214px;
 }
+
+.eg-radio {
+  padding-left: 20px;
+}
