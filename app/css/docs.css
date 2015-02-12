@@ -87,3 +87,7 @@
 .eg-radio {
   padding-left: 20px;
 }
+
+.poster-template {
+  display: none;
+}

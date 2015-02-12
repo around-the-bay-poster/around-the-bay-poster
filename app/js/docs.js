@@ -99,8 +99,10 @@ $(function() {
 
   $("#downloadPdf").click(function() {
     var dataURL = $image.cropper("getDataURL", "image/jpeg", 1);
+    var posterTemplateDataURL = getImageDataURL($(".poster-template img")[0])
     var doc = new jsPDF('portrait', 'mm', 'a3');
-    doc.addImage(dataURL, 'JPEG', 15, 40, 180, 160);
+    doc.addImage(posterTemplateDataURL, 'JPEG', 0, 0, 297, 420);
+    doc.addImage(dataURL, 'JPEG', 0, 132, 297, 160);
     // Optional - set properties on the document
     doc.setProperties({
       title: 'Around the bay - NAME?',
@@ -109,6 +111,8 @@ $(function() {
       keywords: 'generated, javascript, web 2.0, ajax',
       creator: 'NAME?'
     });
+    //alert(doc.output('datauristring'));
+    //$(".poster-preview object").attr('data', doc.output('datauristring'));
     doc.save('AroundTheBayPoster.pdf');
   });
 
@@ -132,5 +136,18 @@ $(function() {
       }
     };
   };
-  mergeImages();
+
+  function getImageDataURL(img) {
+      var canvas = document.createElement("canvas");
+      canvas.width = img.width;
+      canvas.height = img.height;
+
+      // Copy the image contents to the canvas
+      var ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0);
+
+      // Get the data-URL formatted image
+      return dataURL = canvas.toDataURL("image/jpeg");
+  };
+
 });
