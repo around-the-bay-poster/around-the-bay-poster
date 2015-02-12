@@ -121,7 +121,6 @@ $(function() {
     var c=document.getElementById("myCanvas");
     var ctx=c.getContext("2d");
     var resultPreview = $(".result-preview")
-    debugger;
     ctx.canvas.width  = resultPreview.width();
     ctx.canvas.height = resultPreview.height();
     var imageObj1 = new Image();
@@ -137,7 +136,6 @@ $(function() {
       }
     };
   };
-
   function getImageDataURL(img) {
       var canvas = document.createElement("canvas");
       canvas.width = img.width;

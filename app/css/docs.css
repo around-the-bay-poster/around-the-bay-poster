@@ -1,10 +1,17 @@
+img {
+  color: grey;
+  font:40px Impact;
+  text-align: center;
+  max-width:100%;
+  max-height:100%;
+}
+
 .eg-container {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px;
+  margin: 15px;
 }
 
 .eg-main {
-  max-height: 480px;
   margin-bottom: 30px;
 }
 
@@ -12,7 +19,6 @@
   background-color: #f7f7f7;
   border: 1px solid #eee;
   box-shadow: inset 0 0 3px #f7f7f7;
-  height: 480px;
   width: 100%;
   overflow: hidden;
 }
@@ -38,21 +44,6 @@
   height: 160px;
 }
 
-.preview-md {
-  width: 145px;
-  height: 90px;
-}
-
-.preview-sm {
-  width: 72.5px;
-  height: 45px;
-}
-
-.preview-xs {
-  width: 36.25px;
-  height: 22.5px;
-}
-
 .eg-data {
   padding-right: 15px;
 }
@@ -68,6 +59,7 @@
 
 .eg-button > .btn {
   margin-right: 15px;
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 
@@ -82,10 +74,6 @@
 
 .eg-output img {
   max-height: 214px;
-}
-
-.eg-radio {
-  padding-left: 20px;
 }
 
 .poster-template {
