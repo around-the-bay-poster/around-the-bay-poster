@@ -22,18 +22,21 @@
 <body>
   <div class="container-fluid eg-container" id="basic-example">
     <div class="row eg-main">
-      <div class="col-xs-12 col-sm-8">
+      <div class="col-xs-12 col-sm-6">
         <div class="eg-wrapper">
           <img class="cropper" alt="Upload your picture">
         </div>
       </div>
-      <div class="col-xs-12 col-sm-4">
+      <div class="col-xs-12 col-sm-6">
         <div class="eg-preview clearfix">
           <div class="preview preview-lg"></div>
         </div>
         <div class="eg-radio">
           <label class="radio inline control-label"><input type="radio" name="imageType" checked/>Individual</label>
           <label class="radio inline control-label"><input type="radio" name="imageType"/>Team</label>
+        </div>
+        <div class="result-preview">
+          <canvas id="myCanvas" width="100%" height="425"></canvas>
         </div>
       </div>
     </div>

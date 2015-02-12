@@ -112,4 +112,25 @@ $(function() {
     doc.save('AroundTheBayPoster.pdf');
   });
 
+  mergeImages = function() {
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+    var resultPreview = $(".result-preview")
+    debugger;
+    ctx.canvas.width  = resultPreview.width();
+    ctx.canvas.height = resultPreview.height();
+    var imageObj1 = new Image();
+    var imageObj2 = new Image();
+    imageObj1.src = "images/individual_poster.jpg"
+    imageObj2.src = "images/team_poster.jpg";
+    imageObj1.onload = function() {
+      ctx.drawImage(imageObj1, 0, 0, 425, 300);
+      imageObj2.onload = function() {
+        ctx.drawImage(imageObj2, 15, 85, 300, 300);
+        var img = c.toDataURL("image/png");
+        document.write('<img src="' + img + '" width="328" height="526"/>');
+      }
+    };
+  };
+  mergeImages();
 });
