@@ -114,6 +114,7 @@ $(function() {
     //alert(doc.output('bloburi'));
     //$(".poster-preview object").attr('data', doc.output('bloburi'));
     $(".result-preview iframe").attr('src', doc.output('bloburi'));
+    $(".result-preview").show();
     doc.save('AroundTheBayPoster.pdf');
   });
 
