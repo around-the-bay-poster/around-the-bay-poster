@@ -113,7 +113,7 @@ $(function() {
     });
     //alert(doc.output('bloburi'));
     //$(".poster-preview object").attr('data', doc.output('bloburi'));
-    $(".poster-preview iframe").attr('src', doc.output('bloburi'));
+    $(".result-preview iframe").attr('src', doc.output('bloburi'));
     doc.save('AroundTheBayPoster.pdf');
   });
 
