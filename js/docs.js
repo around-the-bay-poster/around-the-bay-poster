@@ -111,6 +111,10 @@ $(function() {
     $(".result-preview iframe").attr('src', doc.output('bloburi'));
     $(".result-preview").show();
     $("#downloadPdf").show();
+
+    $.smoothScroll({
+      scrollTarget: '#downloadPdf'
+    });
   });
 
   createPoster = function() {
