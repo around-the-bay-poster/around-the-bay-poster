@@ -102,60 +102,33 @@ $(function() {
   });
 
   $("#downloadPdf").click(function() {
-    var dataURL = $image.cropper("getDataURL", "image/jpeg", 1);
-    var posterTemplateDataURL = getImageDataURL($(".poster-template img")[0])
-    var doc = new jsPDF('portrait', 'mm', 'a3');
-    doc.addImage(posterTemplateDataURL, 'JPEG', 0, 0, 297, 420);
-    doc.addImage(dataURL, 'JPEG', 0, 132, 297, 160);
-    // Optional - set properties on the document
-    doc.setProperties({
-      title: 'Around the bay - NAME?',
-      subject: 'Helping the Smith Family',
-      author: 'James Hall',
-      keywords: 'generated, javascript, web 2.0, ajax',
-      creator: 'NAME?'
-    });
+    var doc = createPoster();
     doc.save('AroundTheBayPoster.pdf');
   });
 
   $("#preview").click(function() {
-    var dataURL = $image.cropper("getDataURL", "image/jpeg", 1);
-    var posterTemplateDataURL = getImageDataURL($(".poster-template img")[0])
-    var doc = new jsPDF('portrait', 'mm', 'a3');
-    doc.addImage(posterTemplateDataURL, 'JPEG', 0, 0, 297, 420);
-    doc.addImage(dataURL, 'JPEG', 0, 132, 297, 160);
-    // Optional - set properties on the document
-    doc.setProperties({
-      title: 'Around the bay - NAME?',
-      subject: 'Helping the Smith Family',
-      author: 'James Hall',
-      keywords: 'generated, javascript, web 2.0, ajax',
-      creator: 'NAME?'
-    });
+    var doc = createPoster();
     $(".result-preview iframe").attr('src', doc.output('bloburi'));
     $(".result-preview").show();
     $("#downloadPdf").show();
   });
 
-  mergeImages = function() {
-    var c=document.getElementById("myCanvas");
-    var ctx=c.getContext("2d");
-    var resultPreview = $(".result-preview")
-    ctx.canvas.width  = resultPreview.width();
-    ctx.canvas.height = resultPreview.height();
-    var imageObj1 = new Image();
-    var imageObj2 = new Image();
-    imageObj1.src = "images/individual_poster.jpg"
-    imageObj2.src = "images/team_poster.jpg";
-    imageObj1.onload = function() {
-      ctx.drawImage(imageObj1, 0, 0, 425, 300);
-      imageObj2.onload = function() {
-        ctx.drawImage(imageObj2, 15, 85, 300, 300);
-        var img = c.toDataURL("image/png");
-        document.write('<img src="' + img + '" width="328" height="526"/>');
-      }
-    };
-  };
+  createPoster = function() {
+    var dataURL = $image.cropper("getDataURL", "image/jpeg", 1);
+    var posterTemplateDataURL = getImageDataURL($(".poster-template img")[0])
+    var doc = new jsPDF('portrait', 'mm', 'a3');
+    doc.addImage(posterTemplateDataURL, 'JPEG', 0, 0, 297, 420);
+    doc.addImage(dataURL, 'JPEG', 0, 132, 297, 170);
+    // Optional - set properties on the document
+    doc.setProperties({
+      title: 'Around the bay - NAME?',
+      subject: 'Helping the Smith Family',
+      author: 'James Hall',
+      keywords: 'generated, javascript, web 2.0, ajax',
+      creator: 'NAME?'
+    });
+    return doc;
+  }
 
   function getImageDataURL(img) {
       var canvas = document.createElement("canvas");
