@@ -152,6 +152,7 @@ $(function() {
       }
     };
   };
+
   function getImageDataURL(img) {
       var canvas = document.createElement("canvas");
       canvas.width = img.width;
@@ -164,5 +165,10 @@ $(function() {
       // Get the data-URL formatted image
       return dataURL = canvas.toDataURL("image/jpeg");
   };
+
+  (function intialisePage() {
+    $(".result-preview").hide();
+    $("#downloadPdf").hide();
+  })();
 
 });

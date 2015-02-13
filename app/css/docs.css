@@ -86,7 +86,6 @@ img {
   padding-top: 30px;
   height: 0;
   overflow: hidden;
-  display: none;
 }
 
 .result-preview iframe {
@@ -96,8 +95,4 @@ img {
   width: 100%;
   height: 100%;
   border: none;
-}
-
-#downloadPdf {
-  display: none;
 }
