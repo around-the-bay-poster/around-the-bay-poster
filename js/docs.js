@@ -101,6 +101,8 @@ $(function() {
       scrollTarget: '.eg-wrapper',
       offset: -10
     });
+    $(".result-preview").hide();
+    $("#downloadPdf").hide();
   });
 
   $("#setAspectRatio").click(function() {
