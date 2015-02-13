@@ -51,6 +51,10 @@ $(function() {
 
   });
 
+  $image.on("built.cropper", function() {
+    $("#preview").show();
+  });
+
   cropper = $image.data("cropper");
 
   $("#zoom").click(function() {
@@ -169,6 +173,7 @@ $(function() {
   (function intialisePage() {
     $(".result-preview").hide();
     $("#downloadPdf").hide();
+    $("#preview").hide();
   })();
 
 });
