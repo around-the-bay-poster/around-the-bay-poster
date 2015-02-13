@@ -31,8 +31,7 @@ $(function() {
 
     // maxWidth: 480,
     // maxHeight: 270,
-    // minWidth: 160,
-    // minHeight: 90,
+    // minWidth: 160, // minHeight: 90,
 
     done: function(data) {
       $dataX.val(data.x);
@@ -97,6 +96,13 @@ $(function() {
     $inputImage.addClass("hide");
   }
 
+  $(".btn-primary").click(function() {
+    $.smoothScroll({
+      scrollTarget: '.eg-wrapper',
+      offset: -10
+    });
+  });
+
   $("#setAspectRatio").click(function() {
     $image.cropper("setAspectRatio", $("#aspectRatio").val());
   });
@@ -113,7 +119,8 @@ $(function() {
     $("#downloadPdf").show();
 
     $.smoothScroll({
-      scrollTarget: '#downloadPdf'
+      scrollTarget: '#downloadPdf',
+      offset: -10
     });
   });
 
