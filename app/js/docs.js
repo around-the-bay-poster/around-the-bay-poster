@@ -111,11 +111,26 @@ $(function() {
       keywords: 'generated, javascript, web 2.0, ajax',
       creator: 'NAME?'
     });
-    //alert(doc.output('bloburi'));
-    //$(".poster-preview object").attr('data', doc.output('bloburi'));
+    doc.save('AroundTheBayPoster.pdf');
+  });
+
+  $("#preview").click(function() {
+    var dataURL = $image.cropper("getDataURL", "image/jpeg", 1);
+    var posterTemplateDataURL = getImageDataURL($(".poster-template img")[0])
+    var doc = new jsPDF('portrait', 'mm', 'a3');
+    doc.addImage(posterTemplateDataURL, 'JPEG', 0, 0, 297, 420);
+    doc.addImage(dataURL, 'JPEG', 0, 132, 297, 160);
+    // Optional - set properties on the document
+    doc.setProperties({
+      title: 'Around the bay - NAME?',
+      subject: 'Helping the Smith Family',
+      author: 'James Hall',
+      keywords: 'generated, javascript, web 2.0, ajax',
+      creator: 'NAME?'
+    });
     $(".result-preview iframe").attr('src', doc.output('bloburi'));
     $(".result-preview").show();
-    doc.save('AroundTheBayPoster.pdf');
+    $("#downloadPdf").show();
   });
 
   mergeImages = function() {

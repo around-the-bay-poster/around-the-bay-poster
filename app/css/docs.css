@@ -97,3 +97,7 @@ img {
   height: 100%;
   border: none;
 }
+
+#downloadPdf {
+  display: none;
+}
