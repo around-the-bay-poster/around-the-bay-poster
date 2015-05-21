@@ -1,0 +1,6 @@
+*.so
+*.o
+*.a
+mkmf.log
+*.swp
+.DS_Store
