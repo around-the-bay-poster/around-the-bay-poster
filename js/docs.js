@@ -125,9 +125,9 @@ $(function() {
     doc.addImage(posterTemplateDataURL, 'JPEG', 0, 0, 297, 420);
     doc.addImage(dataURL, 'JPEG', 0, 132, 297, 170);
     // doc.text(100,35, $("#riderName")[0].value);
-    doc.text(40,368, "Siebert Lubbe");
-    doc.text(52,381, "200");
-    doc.text(142,381, "500");
+    doc.text(40, 368, $("#riderName")[0].value);
+    doc.text(52, 381, $("#riderDistance")[0].value);
+    doc.text(142, 381, $("#riderFundraisingGoal")[0].value);
     // Optional - set properties on the document
     doc.setProperties({
       title: 'Around the bay - NAME?',
