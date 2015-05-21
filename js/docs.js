@@ -8,15 +8,22 @@ $(function() {
       cropper;
 
   $image.cropper({
-    aspectRatio: 16 / 9,
-    // autoCropArea: 1,
-    data: {
-      x: 420,
-      y: 50,
-      width: 640,
-      height: 360
-    },
+    aspectRatio: 316 / 172,
+    autoCropArea: 1,
+    //data: {
+    //  x: 420,
+    //  y: 50,
+    //  width: 640,
+    //  height: 360
+    //},
     preview: ".preview",
+
+    //strict: false,
+    //guides: false,
+    //highlight: false,
+    dragCrop: false,
+    movable: false,
+    resizable: false,
 
     // multiple: true,
     // autoCrop: false,
