@@ -21,14 +21,28 @@
 </head>
 <body>
   <div class="container-fluid eg-container">
+    <form>
+      <div class="form-group">
+        <label for="riderName">Your name</label>
+        <input type="text" class="form-control" id="riderName" placeholder="Enter name">
+      </div>
+      <div class="form-group">
+        <label for="riderDistance">How far are you riding?</label>
+        <input type="text" class="form-control" id="riderDistance" placeholder="Enter distance">
+      </div>
+      <div class="form-group">
+        <label for="riderFundraisingGoal">How much money are you aiming to raise?</label>
+        <input type="text" class="form-control" id="riderFundraisingGoal" placeholder="Enter fundraising goal">
+      </div>
+    </form>
     <div class="col-md-12">
         <div class="eg-wrapper">
           <img class="cropper" alt="Upload your picture">
         </div>
     </div>
     <div class="col-md-12 eg-button">
-        <button class="btn btn-info" id="zoomIn" type="button">Zoom In</button>
-        <button class="btn btn-info" id="zoomOut" type="button">Zoom Out</button>
+        <!-- <button class="btn btn-info" id="zoomIn" type="button">Zoom In</button>
+        <button class="btn btn-info" id="zoomOut" type="button">Zoom Out</button> -->
         <label class="btn btn-primary" for="inputImage" title="Upload image file">
           <input class="hide" id="inputImage" name="file" type="file" accept="image/*">
           Upload
