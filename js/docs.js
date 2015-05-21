@@ -124,6 +124,10 @@ $(function() {
     var doc = new jsPDF('portrait', 'mm', 'a3');
     doc.addImage(posterTemplateDataURL, 'JPEG', 0, 0, 297, 420);
     doc.addImage(dataURL, 'JPEG', 0, 132, 297, 170);
+    // doc.text(100,35, $("#riderName")[0].value);
+    doc.text(40,368, "Siebert Lubbe");
+    doc.text(52,381, "200");
+    doc.text(142,381, "500");
     // Optional - set properties on the document
     doc.setProperties({
       title: 'Around the bay - NAME?',
