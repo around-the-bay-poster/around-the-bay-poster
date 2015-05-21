@@ -1,3 +1,19 @@
+body {
+  background: #003767;
+  color: white;
+}
+
+#header {
+  background: white;
+  height: 9vh;
+  font-size: 3vh;
+  color: black;
+}
+
+#header img {
+  float: right;
+}
+
 img {
   color: grey;
   font-size:15px;
@@ -16,17 +32,17 @@ img {
 }
 
 .eg-wrapper {
-  background-color: #f7f7f7;
-  border: 1px solid #eee;
-  box-shadow: inset 0 0 3px #f7f7f7;
-  width: 100%;
-  height: 80vh;
-  overflow: hidden;
+  /* background-color: #f7f7f7; */
+  /* border: 1px solid #eee; */
+  /* box-shadow: inset 0 0 3px #f7f7f7; */
+  /* width: 100%; */
+  /* height: 50vw; */
+  /* overflow: hidden; */
 }
 
 .eg-wrapper img {
-  width: 100%;
-  height: 80vh;
+  /* width: 100vw; */
+  /* height: 80vh; */
 }
 
 .eg-preview {
@@ -100,5 +116,5 @@ img {
 }
 
 .poster-preview img {
-  width: 100%;
+  /* width: 100%; */
 }
