@@ -3,4 +3,5 @@
 *.a
 mkmf.log
 *.swp
+*.swo
 .DS_Store
