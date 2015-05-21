@@ -96,14 +96,6 @@ $(function() {
     $inputImage.addClass("hide");
   }
 
-  $(".btn-primary").click(function() {
-    $.smoothScroll({
-      scrollTarget: '.eg-wrapper',
-      offset: -10
-    });
-    $(".result-preview").hide();
-    $("#downloadPdf").hide();
-  });
 
   $("#setAspectRatio").click(function() {
     $image.cropper("setAspectRatio", $("#aspectRatio").val());
