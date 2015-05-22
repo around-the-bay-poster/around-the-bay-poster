@@ -95,6 +95,11 @@ $(function() {
           $image.cropper("reset", true).cropper("replace", this.result);
           $inputImage.val("");
         };
+        fileReader.onloadend = function () {
+          $.smoothScroll({
+            scrollTarget: '#poster-preview',
+          });
+        };
       } else {
         showMessage("Please choose an image file.");
       }
@@ -102,7 +107,6 @@ $(function() {
   } else {
     $inputImage.addClass("hide");
   }
-
 
   $("#setAspectRatio").click(function() {
     $image.cropper("setAspectRatio", $("#aspectRatio").val());
