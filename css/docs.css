@@ -22,6 +22,12 @@ body {
   max-width: 400px;
 }
 
+.btn-inverse {
+  color: white;
+  background-color: #003767;
+  border-color: white;
+}
+
 img {
   color: grey;
   font-size:15px;
