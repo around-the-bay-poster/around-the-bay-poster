@@ -125,6 +125,10 @@ img {
   border: none;
 }
 
+.poster-preview {
+  border: 1px solid #2A4959;
+}
+
 .poster-preview img {
   /* width: 100%; */
 }

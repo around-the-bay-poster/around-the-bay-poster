@@ -97,7 +97,7 @@ $(function() {
         };
         fileReader.onloadend = function () {
           $.smoothScroll({
-            scrollTarget: '#poster-preview',
+            scrollTarget: '#step-2',
           });
         };
       } else {
