@@ -18,8 +18,9 @@ body {
   float: left;
 }
 
-#poster-builder {
+.poster-builder {
   max-width: 400px;
+  height: 91vh;
 }
 
 .btn-inverse {
