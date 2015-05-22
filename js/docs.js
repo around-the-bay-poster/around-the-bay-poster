@@ -117,15 +117,9 @@ $(function() {
     doc.save('AroundTheBayPoster.pdf');
   });
 
-  $("#preview").click(function() {
-    var doc = createPoster();
-    $(".result-preview iframe").attr('src', doc.output('bloburi'));
-    $(".result-preview").show();
-    $("#downloadPdf").show();
-
+  $("#startOver").click(function() {
     $.smoothScroll({
-      scrollTarget: '#downloadPdf',
-      offset: -10
+      scrollTarget: '#header',
     });
   });
 
