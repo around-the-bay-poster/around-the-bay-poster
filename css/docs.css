@@ -18,6 +18,10 @@ body {
   float: left;
 }
 
+#poster-builder {
+  max-width: 400px;
+}
+
 img {
   color: grey;
   font-size:15px;
