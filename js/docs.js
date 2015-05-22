@@ -163,10 +163,4 @@ $(function() {
       return dataURL = canvas.toDataURL("image/jpeg");
   };
 
-  (function intialisePage() {
-    $(".result-preview").hide();
-    $("#downloadPdf").hide();
-    $("#preview").hide();
-  })();
-
 });
