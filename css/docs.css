@@ -35,6 +35,11 @@ body {
   border-color: white;
 }
 
+.btn-inverse:hover {
+  background-color: white;
+  color: #003767;
+}
+
 img {
   color: grey;
   font-size:15px;
