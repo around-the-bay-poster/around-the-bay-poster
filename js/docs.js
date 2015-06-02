@@ -127,10 +127,14 @@ $(function() {
     var dataURL = $image.cropper("getDataURL", "image/jpeg", 1);
     var posterTemplateDataURL = getImageDataURL($(".poster-template img")[0])
     var posterHeaderDataURL = getImageDataURL($(".poster-template img")[1])
+    var posterRedTriangleDataURL = getImageDataURL($(".poster-template img")[2])
+    var posterFooterDataURL = getImageDataURL($(".poster-preview img")[2])
     var doc = new jsPDF('portrait', 'mm', 'a3');
     doc.addImage(posterTemplateDataURL, 'JPEG', 0, 0, 297, 420);
     doc.addImage(posterHeaderDataURL, 'JPEG', 0, 0, 297, 66);
+    doc.addImage(posterRedTriangleDataURL, 'JPEG', 0, 66, 297, 113);
     doc.addImage(dataURL, 'JPEG', 0, 132, 297, 170);
+    doc.addImage(posterFooterDataURL, 'JPEG', 0, 100, 297, 251);
     // doc.text(100,35, $("#riderName")[0].value);
     doc.text(40, 368, $("#riderName")[0].value);
     doc.text(52, 381, $("#riderDistance")[0].value);
