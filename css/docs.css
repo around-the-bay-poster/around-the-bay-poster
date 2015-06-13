@@ -140,6 +140,13 @@ img {
   border: 1px solid #2A4959;
 }
 
-.poster-preview img {
-  /* width: 100%; */
+.poster-red-triangle {
+  position: relative;
+}
+
+.poster-red-triangle span {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
 }
