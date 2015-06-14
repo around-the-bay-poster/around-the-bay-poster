@@ -134,7 +134,7 @@ $(function() {
     doc.addImage(posterTemplateDataURL, 'JPEG', 0, 0, 297, 420);
     //doc.addImage(posterHeaderDataURL, 'JPEG', 0, 0, 297, 66);
     //doc.addImage(posterRedTriangleDataURL, 'JPEG', 0, 66, 297, 47);
-    doc.addImage(dataURL, 'JPEG', 0, 132, 297, 170);
+    doc.addImage(dataURL, 'JPEG', 77, 112, 144, 141);
     //doc.addImage(posterFooterDataURL, 'JPEG', 0, 269, 297, 151);
     doc.setFontSize(38);
     doc.setFont("helvetica");
