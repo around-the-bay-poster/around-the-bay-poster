@@ -134,6 +134,7 @@ $(function() {
     doc.addImage(posterRedTriangleDataURL, 'JPEG', 0, 66, 297, 47);
     doc.addImage(dataURL, 'JPEG', 0, 132, 297, 170);
     doc.addImage(posterFooterDataURL, 'JPEG', 0, 269, 297, 151);
+    doc.myText("Siebert Lubbe",{align: "center"},0,40);
     doc.text(40, 368, $("#riderName")[0].value);
     doc.text(52, 381, $("#riderDistance")[0].value);
     doc.text(142, 381, $("#riderFundraisingGoal")[0].value);
