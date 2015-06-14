@@ -129,12 +129,17 @@ $(function() {
     var posterHeaderDataURL = getImageDataURL($(".poster-template img")[1])
     var posterRedTriangleDataURL = getImageDataURL($(".poster-template img")[2])
     var posterFooterDataURL = getImageDataURL($(".poster-template img")[3])
+    var posterTemplateDataURL = getImageDataURL($(".poster-template img")[4])
     var doc = new jsPDF('portrait', 'mm', 'a3');
-    doc.addImage(posterHeaderDataURL, 'JPEG', 0, 0, 297, 66);
-    doc.addImage(posterRedTriangleDataURL, 'JPEG', 0, 66, 297, 47);
+    doc.addImage(posterTemplateDataURL, 'JPEG', 0, 0, 297, 420);
+    //doc.addImage(posterHeaderDataURL, 'JPEG', 0, 0, 297, 66);
+    //doc.addImage(posterRedTriangleDataURL, 'JPEG', 0, 66, 297, 47);
     doc.addImage(dataURL, 'JPEG', 0, 132, 297, 170);
-    doc.addImage(posterFooterDataURL, 'JPEG', 0, 269, 297, 151);
-    doc.myText("Siebert Lubbe",{align: "center"},0,40);
+    //doc.addImage(posterFooterDataURL, 'JPEG', 0, 269, 297, 151);
+    doc.setFontSize(38);
+    doc.setFont("helvetica");
+    doc.setTextColor(255,255,255);
+    doc.myText($("#riderName")[0].value,{align: "center"},0,82);
     doc.text(40, 368, $("#riderName")[0].value);
     doc.text(52, 381, $("#riderDistance")[0].value);
     doc.text(142, 381, $("#riderFundraisingGoal")[0].value);
