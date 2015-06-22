@@ -142,7 +142,7 @@ $(function() {
     doc.myText($("#riderName")[0].value,{align: "center"},0,82);
     doc.myText("is riding for a child in need",{align: "center"},0,99);
 
-    doc = printDistance(doc);
+    printDistance(doc);
 
     doc.text(40, 368, $("#riderName")[0].value);
     doc.text(52, 381, $("#riderDistance")[0].value);
