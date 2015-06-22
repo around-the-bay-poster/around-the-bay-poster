@@ -136,13 +136,9 @@ $(function() {
     //doc.addImage(posterRedTriangleDataURL, 'JPEG', 0, 66, 297, 47);
     doc.addImage(dataURL, 'JPEG', 77, 112, 144, 141);
     //doc.addImage(posterFooterDataURL, 'JPEG', 0, 269, 297, 151);
-    doc.setFontSize(38);
-    doc.setFont("helvetica");
-    doc.setTextColor(255,255,255);
-    doc.myText($("#riderName")[0].value,{align: "center"},0,82);
-    doc.myText("is riding for a child in need",{align: "center"},0,99);
 
-    printDistance(doc);
+    printRiderName(doc);
+    printRiderDistance(doc);
 
     doc.text(40, 368, $("#riderName")[0].value);
     doc.text(52, 381, $("#riderDistance")[0].value);
@@ -156,9 +152,18 @@ $(function() {
       creator: 'NAME?'
     });
     return doc;
-  }
+  };
 
-  function printDistance(doc) {
+  function printRiderName(doc) {
+    var nameLine1 = $("#riderName")[0].value || "<your name>";
+    doc.setFontSize(38);
+    doc.setFont("helvetica");
+    doc.setTextColor(255,255,255);
+    doc.myText(nameLine1,{align: "center"},0,82);
+    doc.myText("is riding for a child in need",{align: "center"},0,99);
+  };
+
+  function printRiderDistance(doc) {
     var distanceLine1 = "Sponsor me to get into my lycra and pedal ";
     var distanceLine2 = " in the Around the Bay bike ride";
     var distanceLine3 = "on Sunday 11th October to support the Smith Family.";
@@ -167,7 +172,6 @@ $(function() {
     doc.setTextColor(0,0,0);
     doc.myText(distanceLine1 + $("#riderDistance")[0].value + distanceLine2,{align: "center"},0,271);
     doc.myText(distanceLine3,{align: "center"},0,281);
-    return doc
   }
 
   function getImageDataURL(img) {
