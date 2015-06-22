@@ -139,10 +139,8 @@ $(function() {
 
     printRiderName(doc);
     printRiderDistance(doc);
+    printRiderGoal(doc);
 
-    doc.text(40, 368, $("#riderName")[0].value);
-    doc.text(52, 381, $("#riderDistance")[0].value);
-    doc.text(142, 381, $("#riderFundraisingGoal")[0].value);
     // Optional - set properties on the document
     doc.setProperties({
       title: 'Around the bay - NAME?',
@@ -172,6 +170,15 @@ $(function() {
     doc.setTextColor(0,0,0);
     doc.myText(distanceLine1 + $("#riderDistance")[0].value + distanceLine2,{align: "center"},0,271);
     doc.myText(distanceLine3,{align: "center"},0,281);
+  }
+
+  function printRiderGoal(doc) {
+    var goalLine1 = "My goal is to raise $";
+    var goalLine2 = $("#riderFundraisingGoal")[0].value || "<your goal>"
+    doc.setFontSize(32);
+    doc.setFont("helvetica");
+    doc.setTextColor(255,255,255);
+    doc.text(78,299,goalLine1 + goalLine2,{align: "center"});
   }
 
   function getImageDataURL(img) {
