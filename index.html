@@ -34,11 +34,22 @@
       </div>
       <div class="form-group">
         <label for="riderDistance">What distance are you riding?</label>
-        <input type="text" class="form-control" id="riderDistance" placeholder="Enter distance">
+        <select class="form-control" id="riderDistance">
+          <option>20km</option>
+          <option>50km</option>
+          <option>100km</option>
+          <option>135km</option>
+          <option>210km</option>
+          <option>250km</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="riderFundraisingGoal">What is your fundraising goal?</label>
-        <input type="text" class="form-control" id="riderFundraisingGoal" placeholder="Enter fundraising goal">
+        <div class="input-group">
+          <div class="input-group-addon">$</div>
+          <input type="text" class="form-control" id="riderFundraisingGoal" placeholder="Amount">
+          <div class="input-group-addon">.00</div>
+        </div>
       </div>
     </form>
     <label class="btn btn-inverse btn-lg btn-block" for="inputImage" title="Upload image file">
